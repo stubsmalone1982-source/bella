@@ -1,22 +1,22 @@
 /* ===== MIDNIGHT SILK – FULL POLISH (Animated) ===== */
 
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Georgia", serif;
-  color: #e6dcff;
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-family:Georgia, serif;
+  color:#e6dcff;
 
-  /* Midnight Depth — No Animation, No Overlay */
-  background:
-    radial-gradient(1000px 600px at 50% 45%, rgba(45, 25, 90, 0.45), transparent 65%),
-    radial-gradient(800px 500px at 30% 70%, rgba(70, 45, 140, 0.18), transparent 60%),
-    linear-gradient(180deg, #0a0a12 0%, #0b0b0f 100%);
+  background-color:#0b0b0f;
+  background-image:
+    radial-gradient(900px 520px at 50% 45%, rgba(55, 30, 110, 0.38), transparent 68%),
+    radial-gradient(820px 520px at 70% 60%, rgba(90, 60, 170, 0.16), transparent 70%),
+    radial-gradient(900px 600px at 30% 70%, rgba(70, 45, 140, 0.12), transparent 72%);
 }
+
 
 
 .container {
