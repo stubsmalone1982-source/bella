@@ -6,7 +6,7 @@
 
 const sections = Array.from(document.querySelectorAll(".section"));
 const audio = document.getElementById("audio");
-audio.volume = 0.5; 
+ 
 
 let audioStarted = false;
 
