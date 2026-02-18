@@ -125,3 +125,31 @@ button:hover {
 #audio {
   display: none;
 }
+
+/* ===== MIDNIGHT SILK DEPTH OVERLAY (adds life without clutter) ===== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  /* layered silk-like sheen */
+  background:
+    radial-gradient(900px 520px at 30% 35%, rgba(210, 200, 255, 0.10), transparent 62%),
+    radial-gradient(820px 480px at 72% 62%, rgba(170, 140, 255, 0.10), transparent 60%),
+    radial-gradient(1200px 700px at 52% 48%, rgba(120, 80, 220, 0.12), transparent 70%),
+    linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%, rgba(255,255,255,0.02));
+  mix-blend-mode: screen;
+  opacity: 0.9;
+
+  filter: blur(0.3px);
+  animation: sheenDrift 26s ease-in-out infinite;
+}
+
+@keyframes sheenDrift {
+  0%   { transform: translate3d(-1.2%, -0.8%, 0) scale(1.02); }
+  50%  { transform: translate3d( 1.0%,  0.9%, 0) scale(1.04); }
+  100% { transform: translate3d(-1.2%, -0.8%, 0) scale(1.02); }
+}
+
