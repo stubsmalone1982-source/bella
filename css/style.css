@@ -4,27 +4,6 @@
    Paste at BOTTOM of css/style.css
    ========================================= */
 
-/* ---- Fonts (place files in css/fonts/) ---- */
-@font-face {
-  font-family: "Anabella";
-  src: url("fonts/Anabella.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "WestendRidge";
-  src: url("fonts/Westend%20Ridge%201.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gospel";
-  src: url("fonts/Gospel.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
 
 /* ---- Palette ---- */
 :root{
