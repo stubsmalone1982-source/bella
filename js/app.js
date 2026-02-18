@@ -9,6 +9,14 @@ const audio = document.getElementById("audio");
 
 let audioStarted = false;
 
+<script>
+    // Get the audio element by its ID
+    var audio = document.getElementById("audio");
+
+    // Set the volume to 50% (0.5)
+    audio.volume = 0.5; 
+</script>
+
 function show(id) {
   sections.forEach(s => s.classList.remove("active"));
   const el = document.getElementById(id);
