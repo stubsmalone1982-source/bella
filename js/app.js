@@ -14,7 +14,7 @@ let audioStarted = false;
     var audio = document.getElementById("audio");
 
     // Set the volume to 50% (0.5)
-    audio.volume = 0.5; 
+    audio.volume = 0.3; 
 </script>
 
 function show(id) {
