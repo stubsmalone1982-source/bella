@@ -6,14 +6,11 @@
 
 const sections = Array.from(document.querySelectorAll(".section"));
 const audio = document.getElementById("audio");
+audio.volume = 0.5; 
 
 let audioStarted = false;
 
-    // Get the audio element by its ID
-    var audio = document.getElementById("audio");
 
-    // Set the volume to 50% (0.5)
-    audio.volume = 0.3; 
 
 function show(id) {
   sections.forEach(s => s.classList.remove("active"));
