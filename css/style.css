@@ -1,9 +1,9 @@
-/* ===== GLOBAL RESET ===== */
+/* ===== MIDNIGHT SILK – FULL POLISH (Animated) ===== */
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,51 +25,43 @@ body {
   animation: silkShift 22s ease-in-out infinite;
 }
 
-/* ===== SLOW SILK MOTION ===== */
-
 @keyframes silkShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ===== CONTAINER ===== */
-
 .container {
-  max-width: 900px;
-  padding: 40px;
+  width: min(980px, 92vw);
+  padding: 40px 18px;
 }
-
-/* ===== HEADINGS ===== */
 
 h1 {
   font-weight: 400;
-  font-size: 2.4rem;
-  margin: 60px 0;
-  letter-spacing: 1px;
+  font-size: clamp(1.7rem, 2.2vw + 1rem, 2.6rem);
+  margin: 58px 0;
+  letter-spacing: 0.5px;
   text-shadow: 0 0 12px rgba(200, 180, 255, 0.25);
 }
 
 h3 {
   font-style: italic;
-  opacity: 0.8;
-  margin-bottom: 40px;
+  opacity: 0.85;
+  margin: 22px 0 44px 0;
+  font-size: clamp(1.05rem, 0.6vw + 0.9rem, 1.3rem);
 }
 
 h5 {
   letter-spacing: 4px;
   opacity: 0.6;
+  margin: 0 0 10px 0;
 }
-
-/* ===== NOTE TEXT ===== */
 
 .note {
-  margin: 60px 0;
-  opacity: 0.75;
-  font-size: 0.95rem;
+  margin: 58px 0;
+  opacity: 0.78;
+  font-size: 0.98rem;
 }
-
-/* ===== BUTTONS ===== */
 
 button {
   padding: 16px 46px;
@@ -85,36 +77,51 @@ button {
   backdrop-filter: blur(6px);
 }
 
-/* Button Hover = Silver Lift */
-
 button:hover {
   border-color: #dcdcdc;
   box-shadow: 0 0 18px rgba(220, 220, 255, 0.45);
   transform: translateY(-3px);
 }
 
-/* Dual Button Layout */
-
 .buttons {
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
-
-/* ===== OVAL IMAGE ===== */
 
 .oval-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin: 26px 0 40px 0;
 }
 
 .oval {
-  width: 380px;
-  height: 520px;
+  width: min(380px, 70vw);
+  aspect-ratio: 380 / 520;
   object-fit: cover;
   border-radius: 50% / 45%;
   border: 1px solid rgba(170, 150, 255, 0.6);
   box-shadow: 0 0 22px rgba(170, 150, 255, 0.25);
+}
+
+/* Sections */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Tiny helper text */
+.small {
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* Invisible audio element */
+#audio {
+  display: none;
 }

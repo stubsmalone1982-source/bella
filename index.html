@@ -1,26 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>PLAY</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bella</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Continuous audio (starts on first click due to browser policies) -->
+  <audio id="audio" preload="auto">
+    <source src="music/background.mp3" type="audio/mpeg" />
+  </audio>
 
-<audio id="bg-music" autoplay loop>
-  <source src="music/background.mp3" type="audio/mpeg">
-</audio>
+  <main class="container">
 
-<div class="container">
-  <h1>You ready to behave?</h1>
+    <!-- PAGE 1 -->
+    <section id="p1" class="section">
+      <h1>You ready to behave?</h1>
+      <button data-go="p2">PLAY</button>
+      <p class="small" style="margin-top:22px;">(Heads up: music starts on your first click.)</p>
+    </section>
 
-  <button onclick="location.href='page2.html'">PLAY</button>
-</div>
+    <!-- PAGE 2 (smirk photo) -->
+    <section id="p2" class="section">
+      <div class="oval-wrap">
+        <!-- Put her image at: assets/smirk.png (or change the filename below) -->
+        <img class="oval" src="assets/smirk.png" alt="Her smirk" />
+      </div>
 
-<script>
-  const music = document.getElementById("bg-music");
-  music.volume = 0.3;
-  music.play().catch(()=>{});
-</script>
+      <h1>Yeah…<br />I didn’t think you were.</h1>
+      <button data-go="p3">NEXT</button>
+    </section>
 
+    <!-- PAGE 3 -->
+    <section id="p3" class="section">
+      <h1>Alright, my sassy little Taco.<br />Let’s have some fun then.</h1>
+      <button data-go="l1">BEGIN</button>
+    </section>
+
+    <!-- LEVEL 1 -->
+    <section id="l1" class="section">
+      <h5>LEVEL 1</h5>
+      <h3>Let’s see how good your memory really is.</h3>
+      <h1>What were you wearing the first time we talked?</h1>
+      <p class="note">Write it down. Don’t tell me yet.</p>
+      <button data-go="l2">NEXT</button>
+    </section>
+
+    <!-- LEVEL 2 -->
+    <section id="l2" class="section">
+      <h5>LEVEL 2</h5>
+      <h3>You know exactly what you’re doing.</h3>
+      <h1>What do you do that I’ve told you just gets to me?</h1>
+      <p class="note">Write it down. Don’t tell me yet.</p>
+      <button data-go="l3">NEXT</button>
+    </section>
+
+    <!-- LEVEL 3 -->
+    <section id="l3" class="section">
+      <h5>LEVEL 3</h5>
+      <h3>Last one.</h3>
+      <h1>
+        If we were in the same room right now…<br /><br />
+        On a scale from “behaving” to “absolutely not”…<br />
+        where are we?
+      </h1>
+      <p class="note">Write it down. Don’t tell me yet.</p>
+      <button data-go="final">NEXT</button>
+    </section>
+
+    <!-- FINAL CHOICE -->
+    <section id="final" class="section">
+      <h1>So….. what are you thinking, sweetheart?</h1>
+      <div class="buttons">
+        <!-- Replace with your escape room link -->
+        <button onclick="window.location.href='https://www.enchambered.com/puzzles/alone-together/'">PLAY IT SAFE</button>
+
+        <button data-go="transition">SEE WHAT HAPPENS</button>
+      </div>
+    </section>
+
+    <!-- TRANSITION -->
+    <section id="transition" class="section">
+      <h1>Oh.<br /><br />So we’re doing this the interesting way.</h1>
+
+      <!-- Replace with your Zoom PMI link -->
+      <button onclick="fadeAndEnter(); window.location.href='https://us05web.zoom.us/j/*******516?pwd=1IQuvruIMGmWgKLZIsOHJdh0JaGb6u.1'">ENTER</button>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
