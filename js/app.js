@@ -17,11 +17,45 @@ function show(id) {
 }
 
 function fadeAndEnter() {
-  cutMusic();
-  setTimeout(() => {
-    window.location.href = "https://us05web.zoom.us/j/*******516?pwd=1IQuvruIMGmWgKLZIsOHJdh0JaGb6u.1";
-  }, 1000); // match fadeDuration
+  const fadeDuration = 1000; // 1 second
+  const fadeInterval = 50;
+  const steps = fadeDuration / fadeInterval;
+  const volumeStep = audio.volume / steps;
+
+  const fadeOut = setInterval(() => {
+    if (audio.volume > volumeStep) {
+      audio.volume -= volumeStep;
+    } else {
+      clearInterval(fadeOut);
+      audio.volume = 0;
+      audio.pause();
+
+      // After fade completes, go to Zoom
+      window.location.href = "https://us05web.zoom.us/j/9894612516";
+    }
+  }, fadeInterval);
 }
+
+function fadeAndEscape() {
+  const fadeDuration = 1000; // 1 second
+  const fadeInterval = 50;
+  const steps = fadeDuration / fadeInterval;
+  const volumeStep = audio.volume / steps;
+
+  const fadeOut = setInterval(() => {
+    if (audio.volume > volumeStep) {
+      audio.volume -= volumeStep;
+    } else {
+      clearInterval(fadeOut);
+      audio.volume = 0;
+      audio.pause();
+
+      // After fade completes, go to Escape Room
+      window.location.href = "https://www.enchambered.com/puzzles/alone-together/";
+    }
+  }, fadeInterval);
+}
+
 
 
 // Start music once, on first click/tap.
