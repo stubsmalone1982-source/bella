@@ -13,8 +13,8 @@ body {
 
   /* Midnight Depth — No Animation, No Overlay */
   background:
-    radial-gradient(1000px 600px at 50% 45%, rgba(70, 40, 140, 0.55), transparent 65%),
-    radial-gradient(800px 500px at 30% 70%, rgba(120, 80, 200, 0.25), transparent 60%),
+    radial-gradient(1000px 600px at 50% 45%, rgba(45, 25, 90, 0.45), transparent 65%),
+    radial-gradient(800px 500px at 30% 70%, rgba(70, 45, 140, 0.18), transparent 60%),
     linear-gradient(180deg, #0a0a12 0%, #0b0b0f 100%);
 }
 
