@@ -1,58 +1,113 @@
+/* ===== GLOBAL RESET ===== */
+
 body {
   margin: 0;
-  background: radial-gradient(circle at center, #1a0f2b 0%, #0b0b0f 60%);
-  color: #d8c8ff;
-  font-family: Georgia, serif;
+  padding: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
+  font-family: "Georgia", serif;
+  color: #e6dcff;
+
+  /* Midnight Silk Gradient */
+  background: linear-gradient(
+    135deg,
+    #0b0b0f 0%,
+    #1a0f2b 30%,
+    #140c22 55%,
+    #1b1033 75%,
+    #0b0b0f 100%
+  );
+
+  background-size: 400% 400%;
+  animation: silkShift 22s ease-in-out infinite;
 }
+
+/* ===== SLOW SILK MOTION ===== */
+
+@keyframes silkShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER ===== */
 
 .container {
   max-width: 900px;
+  padding: 40px;
 }
 
-h5 {
-  letter-spacing: 3px;
-  opacity: 0.7;
+/* ===== HEADINGS ===== */
+
+h1 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin: 60px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(200, 180, 255, 0.25);
 }
 
-.italic {
+h3 {
   font-style: italic;
+  opacity: 0.8;
   margin-bottom: 40px;
 }
 
-h1 {
-  margin: 60px 0;
-  font-weight: normal;
+h5 {
+  letter-spacing: 4px;
+  opacity: 0.6;
 }
+
+/* ===== NOTE TEXT ===== */
 
 .note {
   margin: 60px 0;
-  opacity: 0.8;
+  opacity: 0.75;
+  font-size: 0.95rem;
 }
+
+/* ===== BUTTONS ===== */
 
 button {
-  padding: 15px 40px;
+  padding: 16px 46px;
   font-size: 14px;
-  background: transparent;
-  color: #d8c8ff;
-  border: 1px solid #7a4cff;
-  border-radius: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(18, 18, 30, 0.65);
+  color: #e6dcff;
+  border: 1px solid rgba(170, 150, 255, 0.6);
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(6px);
 }
 
+/* Button Hover = Silver Lift */
+
 button:hover {
-  background: #7a4cff;
+  border-color: #dcdcdc;
+  box-shadow: 0 0 18px rgba(220, 220, 255, 0.45);
+  transform: translateY(-3px);
 }
+
+/* Dual Button Layout */
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/* ===== OVAL IMAGE ===== */
+
+.oval-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .oval {
@@ -60,6 +115,6 @@ button:hover {
   height: 520px;
   object-fit: cover;
   border-radius: 50% / 45%;
-  border: 1px solid rgba(122, 76, 255, 0.6);
-  box-shadow: 0 0 18px rgba(122, 76, 255, 0.25);
+  border: 1px solid rgba(170, 150, 255, 0.6);
+  box-shadow: 0 0 22px rgba(170, 150, 255, 0.25);
 }
